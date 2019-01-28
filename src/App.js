@@ -1,9 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./App.css";
+import Navbar from "./components/navbar/Navbar";
+import Provider from "./context";
 
 class App extends Component {
   render() {
-    return <h1>Mon Amie</h1>;
+    return (
+      <Provider>
+        <Fragment>
+          <Navbar />
+        </Fragment>
+      </Provider>
+    );
   }
 }
 
