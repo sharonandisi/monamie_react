@@ -1,0 +1,29 @@
+const AWS = require('aws-sdk');
+
+const dynamodb = new AWS.DynamoDB();
+const docClient = new AWS.DynamoDB.DocumentClient();
+
+const params = {
+    TableName: "dailyWord",
+    Key: {
+        "wordId": 1
+    }
+};
+
+let wordToDisplay = "word not set";
+let description = "description not set";
+let image = "image not set";
+
+exports.handler = (event, context, callback) => {
+    docClient.get(params, (err, data) => {
+        if (err) {
+            return console.error("that didn't work");
+        }
+        const payload = JSON.stringify(data, null, 2);
+        const obj = JSON.parse(payload);
+        wordToDisplay = obj.Item.wordOfTheDay;
+        description = obj.Item.description;
+        image = obj.Item.image;
+        callback(null, {"wordOfTheDay": wordToDisplay, "description": description, "image": image});
+    });
+};
