@@ -11,6 +11,8 @@ const params = {
 
 let word = "word not set";
 let type = 'type not set';
+let story = "story not set";
+
 
 exports.handler = (event, context, callback) => {
     docClient.get(params, (err, data) => {
@@ -21,6 +23,7 @@ exports.handler = (event, context, callback) => {
         const obj = JSON.parse(payload);
         word = obj.Item.word;
         type = obj.Item.pageToShow;
-        callback(null, {"type": type, "word": word });
+        story = obj.Item.story;
+        callback(null, {"type": type, "word": word, "story": story });
     });
 };

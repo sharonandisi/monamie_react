@@ -12,6 +12,8 @@ export default class Main extends Component {
             this.props.history.replace("/word");
           } else if (data.type === "play-time") {
             this.props.history.replace("/play");
+          } else if (data.type === "story") {
+            this.props.history.replace("/story");
           }
         });
     }, 3000);

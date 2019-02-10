@@ -70,7 +70,30 @@ const handlers = {
         this.emit(':tell', 'ask me to create a new Mind Map for you');
     },
     'StoryTimeIntent': function () {
-        this.emit(':tell', 'ask me to tell you a story');
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'story';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+             docClient.get(params, (err, data) => {
+                if (err) {
+                    return console.error("that didn't work");
+                }
+                const payload = JSON.stringify(data, null, 2);
+                const obj = JSON.parse(payload);
+                const story = obj.Item.story;
+                this.emit(':ask', `Today's story is : ${story.title}. ${story.description}`);
+            });
+        }));
     },
     
     'PlayTimeIntent': function () {
