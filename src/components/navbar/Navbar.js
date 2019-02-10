@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class Navbar extends Component {
+class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md navbar-dark bg-danger mb-4">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            Contact Manager
+            Mon Ami
           </Link>
           <button
             className="navbar-toggler"
@@ -20,12 +20,17 @@ export default class Navbar extends Component {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to="/about" className="nav-link">
-                  About
+                  Daily Word
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/contacts" className="nav-link">
-                  Contacts
+                <Link to="/play" className="nav-link">
+                  Play Time
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/story" className="nav-link">
+                  Story Time
                 </Link>
               </li>
             </ul>
@@ -35,3 +40,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default Navbar;
