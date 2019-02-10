@@ -1,18 +1,16 @@
 const AWS = require('aws-sdk');
 
-const dynamodb = new AWS.DynamoDB();
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 const params = {
     TableName: "dailyWord",
     Key: {
-        "wordId": 1
+        "wordId": 0
     }
 };
 
-let wordToDisplay = "word not set";
-let description = "description not set";
-let image = "image not set";
+let word = "word not set";
+let type = 'type not set';
 
 exports.handler = (event, context, callback) => {
     docClient.get(params, (err, data) => {
@@ -21,9 +19,8 @@ exports.handler = (event, context, callback) => {
         }
         const payload = JSON.stringify(data, null, 2);
         const obj = JSON.parse(payload);
-        wordToDisplay = obj.Item.wordOfTheDay;
-        description = obj.Item.description;
-        image = obj.Item.image;
-        callback(null, {"wordOfTheDay": wordToDisplay, "description": description, "image": image});
+        word = obj.Item.word;
+        type = obj.Item.pageToShow;
+        callback(null, {"type": type, "word": word });
     });
 };
