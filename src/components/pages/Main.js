@@ -19,10 +19,6 @@ export default class Main extends Component {
   //     }, 3000);
   //   }
   render() {
-    return (
-      <div>
-        <h1>Main Dashboard</h1>
-      </div>
-    );
+    return <h1>Dashboard</h1>;
   }
 }
