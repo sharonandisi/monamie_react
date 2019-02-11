@@ -1,60 +1,24 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { Component } from 'react';
-import './App.css';
-import firebase from 'firebase';
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-
-firebase.initializeApp({
-  apiKey: "AIzaSyCaEiG_sHndB-st3bA0c9vivJxmyALTCHU",
-  authDomain: "mon-amie-78d91.firebaseapp.com"
-})
-
+import React, { Component, Fragment } from 'react';
+import "./App.css";
+import Navbar from "./components/navbar/Navbar";
+import Auth from "./components/auth/Auth";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "./components/pages/Main";
 
 class App extends Component {
-  state = {
-    isSignedIn : false
-  }
-
-  uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    callbacks: {
-      signInSuccess: () => false
-    }
-  }
-  
-  componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({
-        isSignedIn: !!user
-      })
-      console.log("user", user)
-    })
-  }
   render() {
     return (
-      <div className="App">
-        {this.state.isSignedIn ? (
-          <span>
-            <div>Signed In!</div>
-            <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
-            <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
-            <img
-              alt="profile picture"
-              src={firebase.auth().currentUser.photoURL}
-            />
-          </span>
-        ) : (
-            <StyledFirebaseAuth
-              uiConfig={this.uiConfig}
-              firebaseAuth={firebase.auth()}
-            />
-          )}
-      </div>
+        <Router>
+          <Fragment>
+            < Navbar / >
+            <div className="container">
+              <Switch>
+                < Route exact path = "/" component = { Main } />
+                < Route exact path = "/auth" component = { Auth } />
+              </Switch>
+            </div>
+          </Fragment>
+        </Router>
     );
   }
 }
