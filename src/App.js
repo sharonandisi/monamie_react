@@ -1,11 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import "./App.css";
-import Navbar from "./components/navbar/Navbar";
-import Auth from "./components/auth/Auth";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Component, Fragment } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
+import Auth from "./components/auth/Auth";
 import Provider from "./context";
 import About from "./components/dailyWord/DailyWord";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
