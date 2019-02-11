@@ -1,0 +1,29 @@
+const AWS = require('aws-sdk');
+
+const docClient = new AWS.DynamoDB.DocumentClient();
+
+const params = {
+    TableName: "dailyWord",
+    Key: {
+        "wordId": 0
+    }
+};
+
+let word = "word not set";
+let type = 'type not set';
+let story = "story not set";
+
+
+exports.handler = (event, context, callback) => {
+    docClient.get(params, (err, data) => {
+        if (err) {
+            return console.error("that didn't work");
+        }
+        const payload = JSON.stringify(data, null, 2);
+        const obj = JSON.parse(payload);
+        word = obj.Item.word;
+        type = obj.Item.pageToShow;
+        story = obj.Item.story;
+        callback(null, {"type": type, "word": word, "story": story });
+    });
+};
