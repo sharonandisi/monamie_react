@@ -4,7 +4,7 @@ class MindMap extends Component {
     render() {
         return (
             <div>
-                
+              <h1>Mind Map Works!</h1>  
             </div>
         );
     }

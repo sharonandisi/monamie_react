@@ -111,7 +111,7 @@ const handlers = {
         }
         };
         docClient.update(params, (() => {
-             this.emit(':ask', 'You asked for play time');
+             this.emit(':ask', 'Here are some games you can play');
         }));
     },
     'AMAZON.HelpIntent': function () {

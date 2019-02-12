@@ -7,6 +7,7 @@ import About from "./components/dailyWord/DailyWord";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PlayTime from "./components/playTime/PlayTime";
 import StoryTime from "./components/storyTime/StoryTime";
+import MindMap from "./components/mindMap/MindMap";
 import Main from "./components/pages/Main";
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
                 <Route exact path="/word" component={About} />
                 <Route exact path="/play" component={PlayTime} />
                 <Route exact path="/story" component={StoryTime} />
+                <Route exact path="/mind" component={MindMap} />
                 < Route exact path = "/auth" component = { Auth } />
               </Switch>
             </div>
