@@ -20,7 +20,7 @@ class DailyWord extends Component {
     const { name, description, image, example } = this.state.word;
     return (
       <div className="d-word">
-        <div class="media w-75 mx-auto">
+        <div class="media w-75 mx-auto pt-5">
           <img src={image} alt={name} className="img-fluid" width="300" />
           <div class="media-body ml-3">
             <h5 class="mt-0">{name}</h5>

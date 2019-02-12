@@ -1,20 +1,56 @@
-/* .l-page {
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.l-page {
   background: url("./img/backgroundmonamie.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 85vh;
 }
 
 .d-word {
   background: url("./img/monamiedailyword.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 85vh;
 }
 
 .s-time {
   background: url("./img/monamiehills.jpg");
+}
+
+.l-page,
+.d-word,
+.s-time {
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  height: 85vh;
+  height: 90vh;
+}
+
+/* .s-time h1 {
+  color: white;
 } */
+
+.l-center {
+  position: relative;
+  top: 40%;
+  left: 35%;
+}
+
+.bg-orange {
+  background: orange;
+}
+
+.bg-light-success {
+  background: rgb(182, 241, 94);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-bottom: 70px;
+  padding-top: 40px;
+}
+
+.l-ul {
+  font-size: 24px;
+}
+
+.l-ul ul {
+  list-style-type: none;
+  margin-left: 4em;
+}
