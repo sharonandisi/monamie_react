@@ -21,10 +21,10 @@ class DailyWord extends Component {
   render() {
     const { name, description, image, example } = this.state.word;
     return (
-      <div className="container">
+      <div className="container d-word">
         <div className="row">
           <div className="col-md-12">
-            <div className="card w-50">
+            <div className="card w-25 mx-auto">
               <img className="card-img-top" src={image} alt={name} />
               <div className="card-body">
                 <h1 className="card-title">Word of the Day</h1>
