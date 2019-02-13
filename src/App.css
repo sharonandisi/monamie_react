@@ -1,4 +1,9 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Boogaloo");
+@import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister");
+
 body {
+  width: 100% !important;
   height: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -10,7 +15,8 @@ body {
 }
 
 .d-word {
-  background: url("./img/monamiedailyword.jpg");
+  background: url("./img/black-board.jpg");
+  font-size: 30px;
 }
 
 .s-time {
@@ -24,7 +30,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 100vh;
+  font-family: "Love Ya Like A Sister", cursive;
 }
 
 .l-center {

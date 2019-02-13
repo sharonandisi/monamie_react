@@ -33,11 +33,11 @@ class Navbar extends Component {
                   Story Time
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/mind" className="nav-link">
                   Mind Map
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

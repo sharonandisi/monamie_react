@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PlayTime from "./components/playTime/PlayTime";
 import StoryTime from "./components/storyTime/StoryTime";
 import MindMap from "./components/mindMap/MindMap";
-import Main from "./components/pages/Main";
+// import Main from "./components/pages/Main";
+import LandingPage from "./components/pages/LandingPage";
 
 class App extends Component {
   render() {
@@ -17,9 +18,9 @@ class App extends Component {
         <Router>
           <Fragment>
             <Navbar />
-            <div className="container">
+            <div className="container-fluid">
               <Switch>
-                <Route exact path="/" component={Main} />
+                <Route exact path="/" component={LandingPage} />
                 <Route exact path="/word" component={About} />
                 <Route exact path="/play" component={PlayTime} />
                 <Route exact path="/story" component={StoryTime} />
