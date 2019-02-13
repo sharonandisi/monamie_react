@@ -67,7 +67,22 @@ const handlers = {
         }));
     },
     'MindMapIntent': function () {
-        this.emit(':tell', 'ask me to create a new Mind Map for you');
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'mind-map';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+             this.emit(':ask', 'ask me to create a new Mind Map for you');
+        }));
     },
     'StoryTimeIntent': function () {
         const docClient = new AWS.DynamoDB.DocumentClient();
@@ -95,7 +110,6 @@ const handlers = {
             });
         }));
     },
-    
     'PlayTimeIntent': function () {
         const docClient = new AWS.DynamoDB.DocumentClient();
         const value = 'play-time';
@@ -121,7 +135,23 @@ const handlers = {
         this.emit(':tell', 'bye bye');
     },
     'AMAZON.StopIntent': function () {
-        this.emit(':tell', 'bye');
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'landing-page';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+            this.emit(':tell', 'Goodbye');
+        }));
+        
     },
 };
 
