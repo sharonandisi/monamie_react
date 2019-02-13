@@ -1,0 +1,163 @@
+/* eslint-disable  func-names */
+/* eslint quote-props: ["error", "consistent"]*/
+/**
+ * This sample demonstrates a simple skill built with the Amazon Alexa Skills
+ * nodejs skill development kit.
+ * This sample supports multiple lauguages. (en-US, en-GB, de-DE).
+ * The Intent Schema, Custom Slots and Sample Utterances for this skill, as well
+ * as testing instructions are located at https://github.com/alexa/skill-sample-nodejs-fact
+ **/
+
+'use strict';
+
+const AWS = require('aws-sdk');
+const Alexa = require('alexa-sdk');
+
+//=========================================================================================================================================
+//TODO: The items below this comment need your attention.
+//=========================================================================================================================================
+
+//Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
+//Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
+const APP_ID = undefined;
+
+const handlers = {
+    'LaunchRequest': function () {
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'dashboard';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+            this.emit(':ask', 'Welcome to mon ami');
+        }));
+    },
+    'DailyWordIntent': function () {
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'daily-word';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+             docClient.get(params, (err, data) => {
+                if (err) {
+                    return console.error("that didn't work");
+                }
+                const payload = JSON.stringify(data, null, 2);
+                const obj = JSON.parse(payload);
+                const word = obj.Item.word;
+                this.emit(':ask', `The word of the day is: ${word.name}, which is ${word.description}. Here is an example: ${word.example}`);
+            });
+        }));
+    },
+    'MindMapIntent': function () {
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'mind-map';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+             this.emit(':ask', 'ask me to create a new Mind Map for you');
+        }));
+    },
+    'StoryTimeIntent': function () {
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'story';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+             docClient.get(params, (err, data) => {
+                if (err) {
+                    return console.error("that didn't work");
+                }
+                const payload = JSON.stringify(data, null, 2);
+                const obj = JSON.parse(payload);
+                const story = obj.Item.story;
+                this.emit(':ask', `Today's story is : ${story.title}. ${story.description}`);
+            });
+        }));
+    },
+    'PlayTimeIntent': function () {
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'play-time';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+             this.emit(':ask', 'Here are some games you can play');
+        }));
+    },
+    'AMAZON.HelpIntent': function () {
+        this.emit(':tell', 'Welcome to daily word');
+    },
+    'AMAZON.CancelIntent': function () {
+        this.emit(':tell', 'bye bye');
+    },
+    'AMAZON.StopIntent': function () {
+        const docClient = new AWS.DynamoDB.DocumentClient();
+        const value = 'landing-page';
+        
+        const params = {
+            TableName: "dailyWord",
+            Key: {
+                "wordId": 0
+            },
+        UpdateExpression: "set pageToShow = :newPageValue",
+        ExpressionAttributeValues: {
+            ":newPageValue" : value
+        }
+        };
+        docClient.update(params, (() => {
+            this.emit(':tell', 'Goodbye');
+        }));
+        
+    },
+};
+
+exports.handler = function (event, context, callback) {
+    const alexa = Alexa.handler(event, context, callback);
+    alexa.APP_ID = APP_ID;
+    alexa.registerHandlers(handlers);
+    alexa.execute();
+};

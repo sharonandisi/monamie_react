@@ -1,32 +1,60 @@
-.App {
-  text-align: center;
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Boogaloo");
+@import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister");
+
+body {
+  width: 100% !important;
+  height: 100%;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  overflow: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.l-page {
+  background: url("./img/backgroundmonamie.jpg");
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.d-word {
+  background: url("./img/black-board.jpg");
+  font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.s-time {
+  background: url("./img/monamiehills.jpg");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.l-page,
+.d-word,
+.s-time,
+.bg-light-success {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: "Love Ya Like A Sister", cursive;
+  height: 100vh;
+}
+
+.l-center {
+  position: relative;
+  top: 40%;
+  left: 35%;
+}
+
+.bg-orange {
+  background: orange;
+}
+
+.bg-light-success {
+  background: rgb(182, 241, 94);
+  padding-bottom: 70px;
+}
+
+.l-ul {
+  font-size: 24px;
+}
+
+.l-ul ul {
+  list-style-type: none;
+  margin-left: 4em;
 }
