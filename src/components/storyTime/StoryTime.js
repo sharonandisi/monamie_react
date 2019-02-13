@@ -18,7 +18,7 @@ export default class StoryTime extends Component {
   render() {
     const { title, image } = this.state.story;
     return (
-      <div className="bg-light-success">
+      <div className="pt-5 bg-light-success">
         <div className="w-50 mx-auto">
           <img className="img-fluid text-center" src={image} alt={title} />
           <h1>{title}</h1>
