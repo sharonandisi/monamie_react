@@ -13,7 +13,7 @@ function PlayTime() {
                 value="http://www.booksandgames.com/swf/widgets/anagramScramble-widget-loader.swf"
               />
               <param value="noScale" name="scale" />
-              <param value="false" name="menu"/>
+              <param value="false" name="menu" />
               <param value="true" name="allowFullScreen" />
               <param value="always" name="allowScriptAccess" />
               <param

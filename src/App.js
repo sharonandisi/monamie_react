@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PlayTime from "./components/playTime/PlayTime";
 import StoryTime from "./components/storyTime/StoryTime";
 import MindMap from "./components/mindMap/MindMap";
-// import Main from "./components/pages/Main";
 import LandingPage from "./components/pages/LandingPage";
 
 class App extends Component {

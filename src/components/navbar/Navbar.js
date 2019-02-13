@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   render() {
@@ -33,11 +33,6 @@ class Navbar extends Component {
                   Story Time
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link to="/mind" className="nav-link">
-                  Mind Map
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>
