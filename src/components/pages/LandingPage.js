@@ -27,13 +27,10 @@ export default class LandingPage extends Component {
           <h1>Welcome to Mon Ami</h1>
           <div className="l-ul">
             <p>You can navigate to:</p>
-            <ul>
-              <em>
-                <li>Daily Word</li>
-                <li>Story Time</li>
-                <li>Play Time</li>
-              </em>
-            </ul>
+
+            <button className="btn btn-outline-light mr-3">Daily Word</button>
+            <button className="btn btn-outline-light mr-3">Story Time</button>
+            <button className="btn btn-outline-light mr-3">Play Time</button>
           </div>
         </div>
       </div>

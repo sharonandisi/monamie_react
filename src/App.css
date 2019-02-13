@@ -6,6 +6,7 @@ body {
 
 .l-page {
   background: url("./img/backgroundmonamie.jpg");
+  overflow: hidden;
 }
 
 .d-word {
@@ -18,16 +19,13 @@ body {
 
 .l-page,
 .d-word,
-.s-time {
+.s-time,
+.bg-light-success {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 100vh;
 }
-
-/* .s-time h1 {
-  color: white;
-} */
 
 .l-center {
   position: relative;
@@ -41,9 +39,7 @@ body {
 
 .bg-light-success {
   background: rgb(182, 241, 94);
-  font-family: Georgia, "Times New Roman", Times, serif;
   padding-bottom: 70px;
-  padding-top: 40px;
 }
 
 .l-ul {
