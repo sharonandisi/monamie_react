@@ -7,6 +7,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
+  overflow: hidden;
 }
 
 .l-page {
@@ -56,4 +57,10 @@ body {
 .l-ul ul {
   list-style-type: none;
   margin-left: 4em;
+}
+
+
+/* Nav Bar */
+.navbar {
+  font-family: 'Love Ya Like A Sister', cursive;
 }

@@ -18,7 +18,7 @@ class App extends Component {
         <Router>
           <Fragment>
             <Navbar />
-            <div className="container-fluid">
+            <div>
               <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/word" component={About} />
