@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/maxwaiyaki/monamie_react/precache-manifest.b48f23fc4179a46beec28536e871dee3.js"
+  "/maxwaiyaki/monamie_react/precache-manifest.541122b9044bf28f1f61641791b38d69.js"
 );
 
 workbox.clientsClaim();
