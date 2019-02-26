@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/maxwaiyaki/monamie_react/static/js/runtime~main.dbe022db.js"
   },
   {
-    "revision": "79777123796b99d276d2",
-    "url": "/maxwaiyaki/monamie_react/static/js/main.79777123.chunk.js"
+    "revision": "19f437d8278bf6892338",
+    "url": "/maxwaiyaki/monamie_react/static/js/main.19f437d8.chunk.js"
   },
   {
     "revision": "a4bc14d61a381e572341",
     "url": "/maxwaiyaki/monamie_react/static/js/2.a4bc14d6.chunk.js"
   },
   {
-    "revision": "79777123796b99d276d2",
-    "url": "/maxwaiyaki/monamie_react/static/css/main.7f851b99.chunk.css"
+    "revision": "19f437d8278bf6892338",
+    "url": "/maxwaiyaki/monamie_react/static/css/main.bad33eef.chunk.css"
   },
   {
-    "revision": "621e17c74e8c55cc420566c487a9f585",
+    "revision": "9c8ad37808969621ad74844a459fd7f1",
     "url": "/maxwaiyaki/monamie_react/index.html"
   }
 ];
