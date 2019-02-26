@@ -2,6 +2,7 @@
   "name": "monamie_react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/sharonandisi/monamie_react",
   "dependencies": {
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
@@ -15,7 +16,9 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -28,5 +31,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }

@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.41c40de6.chunk.css",
-  "main.js": "/static/js/main.86bf7135.chunk.js",
-  "main.js.map": "/static/js/main.86bf7135.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
-  "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
-  "static/js/2.4baf3897.chunk.js": "/static/js/2.4baf3897.chunk.js",
-  "static/js/2.4baf3897.chunk.js.map": "/static/js/2.4baf3897.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.df3294d8166db591fb8528936ec881f8.js": "/precache-manifest.df3294d8166db591fb8528936ec881f8.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.41c40de6.chunk.css.map": "/static/css/main.41c40de6.chunk.css.map",
-  "static/media/App.css": "/static/media/monamiehills.fdd7c6a9.jpg"
+  "main.css": "/sharonandisi/monamie_react/static/css/main.75716205.chunk.css",
+  "main.js": "/sharonandisi/monamie_react/static/js/main.a4eeaf9f.chunk.js",
+  "main.js.map": "/sharonandisi/monamie_react/static/js/main.a4eeaf9f.chunk.js.map",
+  "runtime~main.js": "/sharonandisi/monamie_react/static/js/runtime~main.f5e66bdd.js",
+  "runtime~main.js.map": "/sharonandisi/monamie_react/static/js/runtime~main.f5e66bdd.js.map",
+  "static/js/2.28271e47.chunk.js": "/sharonandisi/monamie_react/static/js/2.28271e47.chunk.js",
+  "static/js/2.28271e47.chunk.js.map": "/sharonandisi/monamie_react/static/js/2.28271e47.chunk.js.map",
+  "index.html": "/sharonandisi/monamie_react/index.html",
+  "precache-manifest.24f111c459f2ccdd4816ec7bf8819892.js": "/sharonandisi/monamie_react/precache-manifest.24f111c459f2ccdd4816ec7bf8819892.js",
+  "service-worker.js": "/sharonandisi/monamie_react/service-worker.js",
+  "static/css/main.75716205.chunk.css.map": "/sharonandisi/monamie_react/static/css/main.75716205.chunk.css.map",
+  "static/media/App.css": "/sharonandisi/monamie_react/static/media/monamiehills.fdd7c6a9.jpg"
 }
