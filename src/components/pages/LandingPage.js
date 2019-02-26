@@ -29,21 +29,15 @@ export default class LandingPage extends Component {
           <h1>Welcome to Mon Ami</h1>
           <div className="l-ul">
             <p>You can navigate to:</p>
-            <button className="btn btn-outline-light mr-3">
-              <Link to="/word" className="navbar-brand">
+              <Link to="/word" className="btn btn-outline-light mr-3">
               Daily Word
               </Link>
-            </button>
-            <button className="btn btn-outline-light mr-3">
-              <Link to="/play" className="navbar-brand">
+              <Link to="/play" className="btn btn-outline-light mr-3">
               Play Time
               </Link>
-            </button>
-            <button className="btn btn-outline-light mr-3">
-              <Link to="/story" className="navbar-brand">
+              <Link to="/story" className="btn btn-outline-light mr-3">
                 Story Time
               </Link>
-            </button>
           </div>
         </div>
       </div>
