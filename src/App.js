@@ -17,14 +17,16 @@ class App extends Component {
         <Router>
           <Fragment>
             <Navbar />
-            <Switch>
-              <Route exact path="/" component={LandingPage} />
-              <Route exact path="/word" component={About} />
-              <Route exact path="/play" component={PlayTime} />
-              <Route exact path="/story" component={StoryTime} />
-              <Route exact path="/mind" component={MindMap} />
-              <Route exact path="/auth" component={Auth} />
-            </Switch>
+            <div>
+              <Switch>
+                <Route exact path="/" component={LandingPage} />
+                <Route exact path="/word" component={About} />
+                <Route exact path="/play" component={PlayTime} />
+                <Route exact path="/story" component={StoryTime} />
+                <Route exact path="/mind" component={MindMap} />
+                < Route exact path = "/auth" component = { Auth } />
+              </Switch>
+            </div>
           </Fragment>
         </Router>
       </Provider>
