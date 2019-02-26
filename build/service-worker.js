@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/sharonandisi/monamie_react/precache-manifest.75e415b5a3cf49c68c69fd85eb1d347c.js"
+  "/maxwaiyaki/monamie_react/precache-manifest.b48f23fc4179a46beec28536e871dee3.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/sharonandisi/monamie_react/index.html", {
+workbox.routing.registerNavigationRoute("/maxwaiyaki/monamie_react/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
