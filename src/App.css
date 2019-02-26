@@ -58,3 +58,9 @@ body {
   list-style-type: none;
   margin-left: 4em;
 }
+
+
+/* Nav Bar */
+.navbar {
+  font-family: 'Love Ya Like A Sister', cursive;
+}
