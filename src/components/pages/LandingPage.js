@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class LandingPage extends Component {
   // componentDidMount() {
@@ -28,9 +29,21 @@ export default class LandingPage extends Component {
           <h1>Welcome to Mon Ami</h1>
           <div className="l-ul">
             <p>You can navigate to:</p>
-            <button className="btn btn-outline-light mr-3">Daily Word</button>
-            <button className="btn btn-outline-light mr-3">Story Time</button>
-            <button className="btn btn-outline-light mr-3">Play Time</button>
+            <button className="btn btn-outline-light mr-3">
+              <Link to="/word" className="navbar-brand">
+              Daily Word
+              </Link>
+            </button>
+            <button className="btn btn-outline-light mr-3">
+              <Link to="/play" className="navbar-brand">
+              Play Time
+              </Link>
+            </button>
+            <button className="btn btn-outline-light mr-3">
+              <Link to="/story" className="navbar-brand">
+                Story Time
+              </Link>
+            </button>
           </div>
         </div>
       </div>
