@@ -2,7 +2,7 @@
   "name": "monamie_react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/sharonandisi/monamie_react",
+  "homepage": "https://github.com/maxwaiyaki/monamie_react",
   "dependencies": {
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
